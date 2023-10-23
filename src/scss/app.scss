@@ -53,8 +53,11 @@ body {
   body {
     .steps, .menu-players {
       padding:1rem 1rem;
-      gap:0;
       justify-content:space-between;
+    }
+
+    .menu-players {
+      gap:0;
     }
   }
 }

@@ -68,7 +68,6 @@
 
     article {
       flex-direction: row;
-      flex-wrap:wrap;
       gap:.5rem;
     }
 
@@ -105,16 +104,17 @@
   }
 }
 
-@media (max-width:553px) {
+@media (max-width:550px) {
   .steps {
     justify-content:space-between;
-    gap:2rem;
+    gap:1rem;
     overflow-x:auto;
 
     article {
       justify-content:flex-start;
       align-items:center;
       max-width:120px;
+      flex-wrap:wrap;
       gap:.5rem;
     }
 
