@@ -61,7 +61,10 @@ const Football = () => {
 
       <article>
         {buttons.map((button, index) => (
-          <li key={index}>
+          <li 
+            key={index} 
+            onClick={() => handleButtonClick(index)}>
+
             <img src={Vitoria} alt='time' />
             <img src={button.imgSrc} alt="jogador" className='jogador'/>
             <h1>{nome[index]}</h1>
