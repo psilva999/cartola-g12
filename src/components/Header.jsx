@@ -1,14 +1,35 @@
-import React from 'react'
-
-import { Link } from "react-router-dom";
-
+import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom"
 import LogoDesktop from '../assets/imgs/g12-logo.png'
 
 const Header = () => {
-  return (
+  const [fixed, setFixed] = useState(false),
+        [isLoggedIn, setIsLoggedIn] = useState(false)
 
-    <header>
-      <Link to='/cartola-g12/'>
+  useEffect(() => {
+    window.addEventListener('scroll', handleHeader)
+    window.addEventListener('load', handleHeader)
+
+    return () => {
+      window.removeEventListener('scroll', handleHeader)
+    }
+  }, [])
+
+  const handleHeader = () => {
+    window.scrollY >= 3 ? setFixed(true) : setFixed(false)
+  }
+
+  const activeButtonClick = () => {
+    setIsLoggedIn(true)
+  }
+
+  const removeButtonClick = () => {
+    setIsLoggedIn(false)
+  }
+
+  return (
+    <header className={fixed ? 'fixed' : ''}>
+      <Link to='/cartola-g12/' onClick={removeButtonClick}>
         <nav>
           <div></div>
           <div></div>
@@ -17,16 +38,20 @@ const Header = () => {
       </Link>
 
       <Link to='/cartola-g12/'>
-        <img 
-          src={ LogoDesktop }
-          className='logo' 
-          alt="logo"/>
+        <img
+          src={LogoDesktop}
+          className='logo'
+          alt="logo"
+          onClick={removeButtonClick}
+        />
       </Link>
 
       <Link to='/cartola-g12/time'>
-        <button>ACESSAR</button> </Link>
+        <button onClick={activeButtonClick}>
+          {isLoggedIn ? 'PERFIL' : 'ACESSAR'}
+        </button>
+      </Link>
     </header>
-
   )
 }
 

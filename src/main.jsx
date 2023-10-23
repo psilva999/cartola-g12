@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
 import Home from './components/Home.jsx'
-import Time from './components/Time.jsx'
+import Time from './components/time/Time.jsx'
 
 import './css/app.min.css'
 

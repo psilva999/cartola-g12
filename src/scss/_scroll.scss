@@ -14,8 +14,13 @@ body, .steps {
   }
 
   &::-webkit-scrollbar-thumb {
-    background:$gradient-football;
-    background:$gradient-football;
-    border:.375rem solid $gradient-football;
+    background:$yale-blue;
+    background:$yale-blue;
+    border:.375rem solid $yale-blue;
   }
+}
+
+.steps::-webkit-scrollbar {
+  width:.43rem;
+  height:.5rem;
 }

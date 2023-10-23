@@ -19,6 +19,7 @@ html, body {
 
 body {
   background:$body;
+  overflow-y:auto !important;
 
   &, main {
     @include grid;
@@ -40,7 +41,21 @@ body {
   }
 
   section {
-    width:1200px;
+    width:1150px;
+  }
+
+  main, section, div {
+    overflow:hidden;
+  }
+}
+
+@media (max-width:1200px) {
+  body {
+    .steps, .menu-players {
+      padding:1rem 1rem;
+      gap:0;
+      justify-content:space-between;
+    }
   }
 }
 
@@ -48,3 +63,7 @@ body {
 @import 'steps';
 
 @import 'news';
+@import 'scroll';
+
+@import 'menu-players';
+@import 'football';

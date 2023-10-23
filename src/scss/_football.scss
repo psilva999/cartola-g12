@@ -1,0 +1,14 @@
+.football {
+  position:relative;
+  top:6rem;
+}
+
+@media (max-width:520px) {
+  .football {
+    top:5rem;
+
+    img {
+      width:100%;
+    }
+  }
+}
