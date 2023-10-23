@@ -21,10 +21,12 @@ const Header = () => {
 
   const activeButtonClick = () => {
     setIsLoggedIn(true)
+    window.scrollTo(0,0)
   }
 
   const removeButtonClick = () => {
     setIsLoggedIn(false)
+    window.scrollTo(0,0)
   }
 
   return (

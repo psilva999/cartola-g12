@@ -47,6 +47,10 @@ body {
   main, section, div {
     overflow:hidden;
   }
+
+  main {
+    padding:0 0 9rem 0;
+  }
 }
 
 @media (max-width:1200px) {
@@ -54,10 +58,16 @@ body {
     .steps, .menu-players {
       padding:1rem 1rem;
       justify-content:space-between;
-    }
-
-    .menu-players {
       gap:0;
+    }
+  }
+}
+
+@media (max-width:550px) {
+  body {
+    .steps {
+      padding:0rem 1rem;
+      gap:.75rem;
     }
   }
 }
