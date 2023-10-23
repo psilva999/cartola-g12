@@ -1,0 +1,19 @@
+@keyframes from-top {
+  from {
+    transform:translateY(-6rem);
+  }
+
+  to {
+    transform:translateY(0rem);
+  }
+}
+
+@keyframes just-appear {
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
+}

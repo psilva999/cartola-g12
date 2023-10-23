@@ -1,0 +1,45 @@
+@import 'config';
+
+@mixin flex {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@mixin grid {
+  display:grid;
+  place-items:center;
+}
+
+@mixin leftTop {
+  top:0;
+  left:0;
+}
+
+@mixin absolute {
+  position:absolute;
+  @include leftTop;
+}
+
+@mixin fixed {
+  position:fixed;
+  @include leftTop;
+}
+
+@mixin shadow-min {
+  border-bottom:1px solid rgba(0,0,0,.1);
+  box-shadow:0px 1px 1px 1px rgba(0,0,0,.1);
+}
+
+@mixin shadow-max {
+  border:1px solid rgba(14,107,207,.5);
+  box-shadow:0px 0px 5px 1px #0E6BCF;
+}
+
+@mixin shadow-hover {
+  box-shadow:0px 0px 5px 2px #0E6BCF;
+}
+
+@mixin transition {
+  transition:.2s;
+}
