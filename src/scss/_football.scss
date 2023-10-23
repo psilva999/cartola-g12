@@ -8,6 +8,10 @@
   flex-wrap:wrap;
   animation:just-appear .6s linear forwards;
 
+  span {
+    z-index:1000;
+  }
+
   div, button {
     display:grid;
     grid-template-columns:1fr;

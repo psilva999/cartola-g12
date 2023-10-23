@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import Vitoria from '../../assets/imgs/vitoria.png';
-import Field from '../../assets/imgs/field.png';
+import Vitoria from '../../assets/imgs/vitoria.png'
+import Field from '../../assets/imgs/field.png'
 
-import Arcanjo from '../../assets/imgs/players/arcanjo-gol.jpg';
-import Camutanga from '../../assets/imgs/players/camutanga-zag.jpg';
-import Joao from '../../assets/imgs/players/joao-zag.jpg';
-import Raiam from '../../assets/imgs/players/raiam-lat.jpg';
+import Arcanjo from '../../assets/imgs/players/arcanjo-gol.jpg'
+import Camutanga from '../../assets/imgs/players/camutanga-zag.jpg'
+import Joao from '../../assets/imgs/players/joao-zag.jpg'
+import Raiam from '../../assets/imgs/players/raiam-lat.jpg'
 
-import Matheus from '../../assets/imgs/players/matheus-meia.jpg';
-import Trindade from '../../assets/imgs/players/trindade-meia.jpg';
-import Nem from '../../assets/imgs/players/nem-atac.jpg';
-import Gamalho from '../../assets/imgs/players/gamalho-atac.jpg';
+import Matheus from '../../assets/imgs/players/matheus-meia.jpg'
+import Trindade from '../../assets/imgs/players/trindade-meia.jpg'
+import Nem from '../../assets/imgs/players/nem-atac.jpg'
+import Gamalho from '../../assets/imgs/players/gamalho-atac.jpg'
 
 const Football = () => {
   const buttons = [
@@ -23,23 +23,25 @@ const Football = () => {
     { imgSrc: Trindade },
     { imgSrc: Camutanga },
     { imgSrc: Arcanjo },
-  ];
+  ]
 
   const nome = [
     'Gamalho', 'Welligton Nem', 'Joao', 'Raiam',
     'Matheus', 'Trindade', 'Camutanga', 'Arcanjo',
-  ];
+  ]
 
   const handleButtonClick = (index) => {
     const imgs = document.querySelectorAll('.football ul img'),
           arrayImgs = [...imgs]
-
+  
     arrayImgs[index].classList.add('active')
-
-    if (index === 7) {
-      console.log('oi')
-    }
-  };
+  
+    const allActive = arrayImgs.every(img => img.classList.contains('active'))
+  
+    if (allActive) 
+      document.querySelector('.parabens').classList.add('active')
+  }
+  
 
   return (
     <section className='football'>
@@ -72,7 +74,7 @@ const Football = () => {
         ))}
       </article>
     </section>
-  );
-};
+  )
+}
 
-export default Football;
+export default Football

@@ -51,6 +51,37 @@ body {
   main {
     padding:0 0 9rem 0;
   }
+
+  .parabens {
+    background:$gradient-football;
+    z-index:100;
+    display:none;
+    width:100vw;
+    height:100vh;
+    color:#fff;
+    @include fixed;
+    padding:2rem .5rem;
+    overflow-y:auto;
+    text-align:center;
+
+    img {
+      
+      border-radius:2rem;
+    }
+    
+    &.active {
+      animation:just-appear .3s linear forwards;
+      gap:1rem;
+      @include grid;
+    }
+
+    a {
+      background:$keppel-turquoise;
+      border-radius: .2rem;
+      color:#000;
+      padding:.25rem 1rem;
+    }
+  }
 }
 
 @media (max-width:1200px) {
@@ -68,6 +99,14 @@ body {
     .steps {
       padding:0rem 1rem;
       gap:.75rem;
+    }
+
+    .parabens {
+      img {
+        width:95%;
+        object-fit:fill;
+        border-radius:2rem;
+      }
     }
   }
 }
